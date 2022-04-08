@@ -4,21 +4,15 @@ import com.virtuslab.internship.receipt.Receipt;
 
 import java.math.BigDecimal;
 
-public class TenPercentDiscount {
+public class TenPercentDiscount extends Discount{
 
-    public static final String NAME = "TenPercentDiscount";
+    private static final String NAME = "TenPercentDiscount";
 
     public Receipt apply(Receipt receipt) {
-        if (shouldApply(receipt)) {
-            var totalPrice = receipt.totalPrice().multiply(BigDecimal.valueOf(0.9));
-            var discounts = receipt.discounts();
-            discounts.add(NAME);
-            return new Receipt(receipt.entries(), discounts, totalPrice);
-        }
-        return receipt;
+        return this.apply(receipt, NAME, 0.9);
     }
 
-    private boolean shouldApply(Receipt receipt) {
+    protected boolean shouldApply(Receipt receipt) {
         return receipt.totalPrice().compareTo(BigDecimal.valueOf(50)) > 0;
     }
 }
