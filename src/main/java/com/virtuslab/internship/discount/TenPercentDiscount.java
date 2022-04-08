@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 public class TenPercentDiscount {
 
-    public static String NAME = "TenPercentDiscount";
+    public static final String NAME = "TenPercentDiscount";
 
     public Receipt apply(Receipt receipt) {
         if (shouldApply(receipt)) {
@@ -19,6 +19,6 @@ public class TenPercentDiscount {
     }
 
     private boolean shouldApply(Receipt receipt) {
-        return receipt.totalPrice().compareTo(BigDecimal.valueOf(50)) < 0;
+        return receipt.totalPrice().compareTo(BigDecimal.valueOf(50)) > 0;
     }
 }
