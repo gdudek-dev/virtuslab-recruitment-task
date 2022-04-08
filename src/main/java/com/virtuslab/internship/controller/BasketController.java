@@ -19,7 +19,7 @@ public class BasketController {
         this.basketService = basketService;
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     public ResponseEntity<Receipt> getReceipt(@RequestBody Basket basket) {
         return basketService.getReceipt(basket);
     }
