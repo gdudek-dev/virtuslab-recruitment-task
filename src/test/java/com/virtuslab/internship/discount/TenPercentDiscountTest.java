@@ -36,6 +36,26 @@ class TenPercentDiscountTest {
     }
 
     @Test
+    void shouldApply10PercentDiscountWhenPriceEquals50() {
+        // Given
+        var productDb = new ProductDb();
+        var bread = productDb.getProduct("Bread");
+        List<ReceiptEntry> receiptEntries = new ArrayList<>();
+        receiptEntries.add(new ReceiptEntry(bread, 10));
+
+        var receipt = new Receipt(receiptEntries);
+        var discount = new TenPercentDiscount();
+        var expectedTotalPrice = bread.price().multiply(BigDecimal.valueOf(10)).multiply(BigDecimal.valueOf(0.9));
+
+        // When
+        var receiptAfterDiscount = discount.apply(receipt);
+
+        // Then
+        assertEquals(expectedTotalPrice, receiptAfterDiscount.totalPrice());
+        assertEquals(1, receiptAfterDiscount.discounts().size());
+    }
+
+    @Test
     void shouldNotApply10PercentDiscountWhenPriceIsBelow50() {
         // Given
         var productDb = new ProductDb();

@@ -13,6 +13,6 @@ public class TenPercentDiscount extends Discount{
     }
 
     protected boolean shouldApply(Receipt receipt) {
-        return receipt.totalPrice().compareTo(BigDecimal.valueOf(50)) > 0;
+        return receipt.totalPrice().compareTo(BigDecimal.valueOf(50)) >= 0;
     }
 }
