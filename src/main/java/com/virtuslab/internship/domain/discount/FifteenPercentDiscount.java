@@ -1,8 +1,8 @@
-package com.virtuslab.internship.discount;
+package com.virtuslab.internship.domain.discount;
 
-import com.virtuslab.internship.product.Product;
-import com.virtuslab.internship.receipt.Receipt;
-import com.virtuslab.internship.receipt.ReceiptEntry;
+import com.virtuslab.internship.domain.product.Product;
+import com.virtuslab.internship.domain.receipt.Receipt;
+import com.virtuslab.internship.domain.receipt.ReceiptEntry;
 import org.springframework.stereotype.Component;
 
 @Component

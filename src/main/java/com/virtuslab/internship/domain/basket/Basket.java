@@ -1,6 +1,6 @@
-package com.virtuslab.internship.basket;
+package com.virtuslab.internship.domain.basket;
 
-import com.virtuslab.internship.product.Product;
+import com.virtuslab.internship.domain.product.Product;
 
 import java.util.ArrayList;
 import java.util.List;

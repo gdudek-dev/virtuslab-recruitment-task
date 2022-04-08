@@ -1,12 +1,12 @@
 package com.virtuslab.internship.service;
 
-import com.virtuslab.internship.basket.Basket;
-import com.virtuslab.internship.discount.FifteenPercentDiscount;
+import com.virtuslab.internship.domain.basket.Basket;
+import com.virtuslab.internship.domain.discount.FifteenPercentDiscount;
 import com.virtuslab.internship.exception.BasketIsEmptyException;
-import com.virtuslab.internship.product.ProductDb;
-import com.virtuslab.internship.receipt.Receipt;
-import com.virtuslab.internship.receipt.ReceiptEntry;
-import com.virtuslab.internship.receipt.ReceiptGenerator;
+import com.virtuslab.internship.domain.product.ProductDb;
+import com.virtuslab.internship.domain.receipt.Receipt;
+import com.virtuslab.internship.domain.receipt.ReceiptEntry;
+import com.virtuslab.internship.domain.receipt.ReceiptGenerator;
 import com.virtuslab.internship.service.basket.impl.BasketServiceImpl;
 import org.junit.jupiter.api.Test;
 

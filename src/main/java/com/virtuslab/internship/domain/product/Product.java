@@ -1,4 +1,4 @@
-package com.virtuslab.internship.product;
+package com.virtuslab.internship.domain.product;
 
 import java.math.BigDecimal;
 

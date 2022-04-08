@@ -1,7 +1,7 @@
 package com.virtuslab.internship.controller;
 
-import com.virtuslab.internship.basket.Basket;
-import com.virtuslab.internship.receipt.Receipt;
+import com.virtuslab.internship.domain.basket.Basket;
+import com.virtuslab.internship.domain.receipt.Receipt;
 import com.virtuslab.internship.service.basket.BasketService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
