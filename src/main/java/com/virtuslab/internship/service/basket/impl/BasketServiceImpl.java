@@ -10,16 +10,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BaskedServiceImpl implements BasketService {
+public class BasketServiceImpl implements BasketService {
 
     private final ReceiptGenerator receiptGenerator;
     private final FifteenPercentDiscount fifteenPercentDiscount;
 
-    public BaskedServiceImpl(ReceiptGenerator receiptGenerator, FifteenPercentDiscount fifteenPercentDiscount) {
+    public BasketServiceImpl(ReceiptGenerator receiptGenerator, FifteenPercentDiscount fifteenPercentDiscount) {
         this.receiptGenerator = receiptGenerator;
         this.fifteenPercentDiscount = fifteenPercentDiscount;
     }
-
 
     @Override
     public ResponseEntity<Receipt> getReceipt(Basket basket) {
