@@ -3,7 +3,9 @@ package com.virtuslab.internship.discount;
 import com.virtuslab.internship.product.Product;
 import com.virtuslab.internship.receipt.Receipt;
 import com.virtuslab.internship.receipt.ReceiptEntry;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FifteenPercentDiscount extends Discount {
 
     private static final String NAME = "FifteenPercentDiscount";
